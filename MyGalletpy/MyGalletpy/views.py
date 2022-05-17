@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import Template, Context, loader
+from django.shortcuts import render
 import os
 from MyGalletpy.settings import BASE_DIR
 # Necesitamos Request para realizar peticiones al servidor
@@ -7,31 +8,19 @@ from MyGalletpy.settings import BASE_DIR
 
 #Vista del home de la aplicacion
 def home(request): #Se le pasa un objeto de tipo request como primer argumento
-    externalTemplate = loader.get_template("home_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "home_template.html")
 
 def pockets(request):
-    externalTemplate = loader.get_template("pockets_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "pocket_template.html")
 
 def login(request):
-    externalTemplate = loader.get_template("login_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "login_template.html")
 
 def register(request):
-    externalTemplate = loader.get_template("register_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "register_template.html")
 
 def history(request):
-    externalTemplate = loader.get_template("history_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "history_template.html")
 
 def transaction(request):
-    externalTemplate = loader.get_template("transaction_template.html")
-    document = externalTemplate.render()
-    return HttpResponse(document)
+    return render(request, "transaction_template.html")
