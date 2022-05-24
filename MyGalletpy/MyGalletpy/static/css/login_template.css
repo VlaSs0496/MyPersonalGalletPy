@@ -1,0 +1,110 @@
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content: center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+form{
+    background-color:rgba(0, 107, 150, 0.171);
+    padding: 40px 0px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    color: #8e2de2;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.562);
+    margin: 0 10px 0 10px;
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .inputs {
+    position: relative;
+    margin: 45px;
+    background: none;
+}
+
+input{
+    background: none;
+    color:white;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+input:focus{
+    outline: none;
+    color: grey;
+    border-bottom: none;
+}
+
+label{
+    font-size: 16px;
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 5px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 13px;
+    color: #8e2de2;
+    font-weight: bolder;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    background: linear-gradient(to left, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: 0.5s ease width;
+    position: absolute;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+#btn_submit{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8e2de2, #4a00e0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'roboto';
+    display: block;
+    width: 80%;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px 0px 10px 0px;
+    border-width: 1px;
+}
+
+#btn_submit:hover{
+    background: linear-gradient(to right, rgba(0, 107, 150, 0.171), #006909); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: 0.5s ease;
+    cursor: pointer;
+}

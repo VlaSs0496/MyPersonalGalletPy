@@ -1,13 +1,12 @@
-from django.http import HttpResponse
-from django.template import Template, Context, loader
 from django.shortcuts import render
-import os
-from MyGalletpy.settings import BASE_DIR
-# Necesitamos Request para realizar peticiones al servidor
-# Necesitamos HttpResponse Enviar respuesta por medio del protocolo HTTP
+# Need Request to make querys to the server
+# Need HttpResponse to send response using HTTP protocol, now using render shortcut for the same functionality
 
-#Vista del home de la aplicacion
-def home(request): #Se le pasa un objeto de tipo request como primer argumento
+#application's home view 
+def home(request): #Takes a request object as parameter
+    # render function takes a request object as first argument
+    # As second argument it takes a string specifying the name of the template thats gonna be used
+    # As a third and optional argument it takes a dictionary as a context parameter for the template 
     return render(request, "home_template.html")
 
 def pockets(request):
