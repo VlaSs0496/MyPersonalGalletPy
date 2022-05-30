@@ -1,11 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <body>
+        <link rel="stylesheet" href="{% static 'css/widgets/navigation_bar.css'%}">
         <ul class="principal_navigation_bar">
-            <li> Home </li>
-            <li> Transaction </li>
-            <li> History </li>
-            <li> Pockets </li>
+            <div class="option">
+                <img src="{% static 'icons/home.svg' %}" class="icon">
+                <li> Home </li>
+            </div>
+
+            <div class="option">
+                <img src="{% static 'icons/transaction.svg' %}" class="icon">
+                <li> Transaction </li>
+            </div>
+
+            <div class="option">
+                <img class="icon" src="{% static 'icons/book.svg' %}">
+                <li> History </li>
+            </div>
+
+            <div class="option">
+                <img src="{% static 'icons/wallet.svg' %}" class="icon">
+                <li> Pockets </li>
+            </div>
+
+            <div class="user">
+                <img src="{% static 'icons/account.svg' %}" class="icon">
+            </div>
         </ul>
     </body>
 </html>

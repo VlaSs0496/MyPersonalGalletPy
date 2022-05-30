@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <title>Pockets</title>
-    <meta charset="utf-8">
-    <h1>
-        Pockets page application
-    </h1>
+{% load static %}
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Pockets </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home_template.css' %}">
+    </head>
+<body>
+    {% include 'widgets/navigation_bar_widget.html' %}
+    <h1> Esto deberia estar debajo del widget</h1>
+</body>
 </html>
