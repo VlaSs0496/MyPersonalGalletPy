@@ -2,11 +2,20 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title> Pockets </title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/home_template.css' %}">
+        <title>Pockets</title>
+        <script type="text/javascript" src="{% static 'js/pocket_template.js' %}" ></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pocket_template.css' %}">
     </head>
 <body>
     {% include 'widgets/navigation_bar_widget.html' %}
-    <h1> Esto deberia estar debajo del widget</h1>
+
+    {% for element in list %}
+    <div class="details_row">
+        <h1 class="pocket_name">{{element.name_pocket}}</h1>
+        <h2 class="pocket_balance">{{element.balance_pocket}}</h2>
+    </div>
+    {% endfor %}
+    <button onclick="redirect()" id="btn_submit">Crear pocket</button>
+    <a href="{% url 'pockets_creation' %}" id="link" display="none"></a>
 </body>
 </html>

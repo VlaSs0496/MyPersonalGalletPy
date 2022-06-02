@@ -103,7 +103,15 @@ input:focus~.barra::before{
     transition: 0.5s;
 }
 
-#btn_submit:hover{
+#btn_submit:disabled{
+    background-color: rgba(255, 0, 0, 0.747);
+}
+
+#btn_submit:hover:disabled{
+    background-color: rgba(255, 0, 0, 0.747);
+}
+
+#btn_submit:hover:enabled{
     background: linear-gradient(to right, rgba(0, 107, 150, 0.171), #006909); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     cursor: pointer;
     font-size: 15px;

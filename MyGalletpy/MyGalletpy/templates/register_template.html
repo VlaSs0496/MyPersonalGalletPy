@@ -5,26 +5,28 @@
     <head>
         <meta charset="utf-8">
         <title>login</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/register_template.css' %}">
+        <script type="text/javascript" src="{% static 'js/register_template.js' %}"></script>
     </head>
     <body>
         <form action="" id="form" method="post">
             <div class="form">
+                {% csrf_token %}
                 <h1>Sign up</h1>
                 <div class="inputs">
                     <input type="text" name="username_field" id="f_username" required><span class="barra"></span>
                     <label for="">Username</label>
                 </div>
                 <div class="inputs">
-                    <input type="password" name="password_field" id="f_password" required><span class="barra"></span>
+                    <input oninput="cambioPassword()" type="password" name="password_field" id="f_password" required><span class="barra" id="bar_pwdd"></span>
                     <label for="">Password</label>
                 </div>
                 <div class="inputs">
-                    <input type="password" name="password_repeat_field" id="f_rep_password" required><span class="barra"></span>
+                    <input oninput="cambioPassword()" type="password" name="password_repeat_field" id="f_rep_password" required><span class="barra" id="bar_pwd"></span>
                     <label for="">Repeat your password</label>
                 </div>
             </div>
-            <button type="submit" id="btn_submit">Sign up</button>
-        </form>
+            <button type="submit" id="btn_submit" value="post">Sign up</button>
+        </form>   
+        <link rel="stylesheet" type="text/css" href="{% static 'css/register_template.css' %}">
     </body>
 </html>

@@ -1,10 +1,4 @@
-from enum import unique
-from tkinter import CASCADE
-from turtle import ondrag
-from unicodedata import name
-from unittest import addModuleCleanup
 from django.db import models
-from urllib3 import ProxyManager
 
 # Create your models here.
 class User(models.Model):

@@ -5,22 +5,25 @@
     <head>
         <meta charset="utf-8">
         <title>login</title>
+        <script type="text/javascript" src="{% static 'js/login_template.js' %}"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'css/login_template.css'%}">
     </head>
     <body>
         <form action="" id="form" method="post">
+            {% csrf_token %}
             <div class="form">
-                <h1>Log In</h1>
+                <h1>My personal wallet</h1>
                 <div class="inputs">
-                    <input type="text" name="username_field" id="f_username" required><span class="barra"></span>
+                    <input type="text" name="username_field_login" id="f_username" required><span class="barra"></span>
                     <label for="">Username</label>
                 </div>
                 <div class="inputs">
-                    <input type="password" name="password_field" id="f_password" required><span class="barra"></span>
+                    <input type="password" name="password_field_login" id="f_password" required><span class="barra"></span>
                     <label for="">Password</label>
                 </div>
             </div>
             <button type="submit" id="btn_submit">Log in</button>
+            <a class="link" href="{% url 'register' %}">¿No tienes una cuenta? Create una</a>
         </form>
     </body>
 </html>

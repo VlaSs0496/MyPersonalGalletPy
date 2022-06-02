@@ -1,0 +1,58 @@
+body{
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.details_row{
+    border-style: solid;
+    margin: 15px 30px 15px 30px;
+    background-color: grey;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.details_row:hover h1{
+    font-size: 45px;
+    transition: 0.5s;
+}
+
+.details_row:hover h2{
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.details_row h1{
+    margin-left: 15px;
+    transition: 0.5s;
+}
+
+.details_row h2{
+    margin-left: 35px;
+    transition: 0.5s;
+}
+
+#btn_submit{
+    background: #000000;  /* fallback for old browsers */
+    color: white;
+    font-family: 'roboto';
+    display: block;
+    width: 80%;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px 0px 10px 0px;
+    border-width: 1px;
+    transition: 0.5s;
+}
+
+#btn_submit:hover{
+    background: linear-gradient(to right, rgba(0, 107, 150, 0.171), #006909); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+    transition: 0.5s;
+    width: 90%;
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.25);
+}

@@ -39,13 +39,14 @@
 }
 
 .option{
+    margin-left: 15px;
     transition: 0.5s ;
 }
-
 
 .option:hover{
     transition: 0.5s ;
     margin: 20px;
+    margin-left: 35px;
     cursor:pointer;
 }
 

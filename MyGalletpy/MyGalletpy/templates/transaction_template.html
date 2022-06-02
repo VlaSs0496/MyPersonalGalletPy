@@ -1,8 +1,67 @@
-<!DOCTYPE html>
-<html>
-    <title>Home</title>
-    <meta charset="utf-8">
-    <h1>
-        transaction page application 
-    </h1>
+{% load static %}
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Transaction</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/transaction_template.css' %}">
+        <script type="text/javascript" src="{% static 'js/transaction_template.js' %}"></script>
+    </head>
+<body>
+    {% include 'widgets/navigation_bar_widget.html' %}
+    <form action="" id="form" method="post">
+        <div class="form">
+            {% csrf_token %}
+            <h1>Make a transaction</h1>
+            <div class="inputs">
+                <input type="number" name="transaction_amount" id="tr_amount" required><span class="barra"></span>
+                <label for="">Transaction amount</label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="transaction_reason" id="tr_reason" required><span class="barra"></span>
+                <label for="">Transaction reason</label>
+            </div>
+
+            <div class="inputs">
+                <input type="date" name="transaction_date" id="tr_date" required><span class="barra"></span>
+                <label class="no_moving" for="">Transaction date</label>
+            </div>
+
+            <div class="inputs">
+
+                <select class="selection" name="transaction_type" id="tr_type" onchange="validacionPocket()" required>
+                    <option value=None>-----</option>
+                    <option value=True>Normal</option>
+                    <option value=False>Pocket</option>
+                </select>
+
+                <label class="no_moving" for="">Transaction type</label>
+            </div>
+
+            <div class="inputs">
+
+                <select class="selection" name="transaction_behavior" id="tr_behavior" required>
+                    <option value=None>-----</option>
+                    <option value=True>Ingreso</option>
+                    <option value=False>Egreso</option>
+                </select>
+
+                <label class="no_moving" for="">Transaction behavior</label>
+            </div>
+
+            <div class="inputs">
+
+                <select disabled="true" class="selection" name="transaction_pocket" id="tr_pocket">
+                    <option value="None">-----</option>
+                    {% for option in opciones %}
+                        <option value="{{option.name_pocket}}">{{option.name_pocket}}</option>
+                    {% endfor %}
+                </select>
+
+                <label class="no_moving" for="">Pocket</label>
+            </div>
+
+        </div>
+        <button onclick="activador()" type="submit" id="btn_submit">Submit transaction</button>
+    </form>
+</body>
 </html>

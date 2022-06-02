@@ -1,0 +1,42 @@
+body{
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0px;
+    padding: 0px;
+}
+
+.details_row{
+    border-style: solid;
+    margin: 15px 30px 15px 30px;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.details_row:hover h1{
+    font-size: 45px;
+    transition: 0.5s;
+}
+
+.details_row:hover h2{
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.details_row h1{
+    margin-left: 15px;
+    transition: 0.5s;
+}
+
+.details_row h2{
+    margin-left: 35px;
+    transition: 0.5s;
+}
+
+
+#true{
+    color: rgb(117, 248, 117);
+}
+
+#false{
+    color:rgb(255, 62, 62);
+}

@@ -1,8 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <title>Home</title>
-    <meta charset="utf-8">
-    <h1>
-        History page application 
-    </h1>
+{% load static %}
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>History</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/history_template.css' %}">
+    </head>
+<body>
+    {% include 'widgets/navigation_bar_widget.html' %}
+    <div class="history_containter">
+        {% for info in lista%}
+        <div class="details_row">
+            <h1 class="history_reason" id="{{info.type_transaction}}">{{info.description}}</h1>
+            <h2 class="history_amount">{{info.amount}}</h2>
+            <h2 class="history_date">{{info.date_transaction}}</h3>
+        </div>
+        {% endfor %}
+    </div>
+</body>
 </html>

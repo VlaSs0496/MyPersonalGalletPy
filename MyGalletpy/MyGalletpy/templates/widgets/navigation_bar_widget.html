@@ -3,25 +3,30 @@
 <html>
     <body>
         <link rel="stylesheet" href="{% static 'css/widgets/navigation_bar.css'%}">
+        <script type="text/javascript" src="{% static 'js/widgets/navigation_bar.js' %}"></script>
         <ul class="principal_navigation_bar">
-            <div class="option">
-                <img src="{% static 'icons/home.svg' %}" class="icon">
+            <div class="option" onclick="homeRedirect()">
+                <img src="{% static 'icons/home.svg' %}" class="icon" >
                 <li> Home </li>
+                <a href="{% url 'home' %}" display="none" id="home_redirect"></a>
             </div>
 
-            <div class="option">
+            <div class="option" href="transaction" onclick="transactionRedirect()">
                 <img src="{% static 'icons/transaction.svg' %}" class="icon">
                 <li> Transaction </li>
+                <a href="{% url 'transaction' %}" display="none" id="transaction_redirect"></a>
             </div>
 
-            <div class="option">
+            <div class="option" href="history" onclick="historyRedirect()">
                 <img class="icon" src="{% static 'icons/book.svg' %}">
                 <li> History </li>
+                <a href="{% url 'history' %}" display="none" id="history_redirect"></a>
             </div>
 
-            <div class="option">
+            <div class="option" href="pockets" onclick="pocketRedirect()">
                 <img src="{% static 'icons/wallet.svg' %}" class="icon">
                 <li> Pockets </li>
+                <a href="{% url 'pockets' %}" display="none" id="pockets_redirect"></a>
             </div>
 
             <div class="user">

@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pockets_creation_template.css' %}">
+    <title>Pocket creation</title>
+</head>
+<body>
+    {% include 'widgets/navigation_bar_widget.html' %}
+    <form id="form" method="post">
+        <div class="form">
+            {% csrf_token %}
+            <h1>Make a transaction</h1>
+            <div class="inputs">
+                <input type="text" name="pocket_creation_name" id="pocket_creation_name" required><span class="barra"></span>
+                <label for="">Pocket name</label>
+            </div>
+            <button type="submit" id="btn_submit">Submit pocket creation</button>
+        </div>
+    </form>
+</body>
+</html>

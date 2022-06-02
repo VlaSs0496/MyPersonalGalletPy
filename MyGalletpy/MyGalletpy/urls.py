@@ -16,14 +16,15 @@ Including another URLconf
 from django import views
 from django.contrib import admin
 from django.urls import path
-from MyGalletpy.views import home, pockets, login, register, transaction, history
+from MyGalletpy.views import home, pockets, login, register, transaction, history, pocket_creation
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
-    path('register/', register),
-    path('login/', login),
-    path('transaction/', transaction),
-    path('history/', history),
-    path('pockets/', pockets)
+    path('home/', home, name='home'),
+    path('register/', register, name='register'),
+    path('login/', login, name='login'),
+    path('transaction/', transaction, name='transaction'),
+    path('history/', history, name='history'),
+    path('pockets/', pockets, name='pockets'),
+    path('create_pocket/', pocket_creation, name='pockets_creation')
 ]

@@ -29,6 +29,7 @@ form .inputs {
     background: none;
 }
 
+
 input{
     background: none;
     color:white;
@@ -80,6 +81,7 @@ input:valid~label{
     position: absolute;
 }
 
+
 input:focus~.barra::before{
     width: 100%;
 }
@@ -89,30 +91,6 @@ input:focus~.barra::before{
     font-size: 13px;
     font-weight: bolder;
 }
-
-.no_moving:valid{
-    color: #8e2de2;
-    transition: 0.5s;
-}
-
-.no_moving:invalid{
-    color: white;
-    transition: 0.5s;
-}
-
-.selection{
-    width: 100%;
-    color: white;
-    background: rgba(255, 255, 255, 0.25);
-    padding: 10px;
-    margin: 5px 10px 0px 10px;
-    border-radius: 4px;
-}
-
-.selection option{
-    color: black;
-}
-
 
 #btn_submit{
     background: #000000;  /* fallback for old browsers */
